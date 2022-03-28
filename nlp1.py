@@ -1,5 +1,5 @@
 from textblob import TextBlob
-
+'''
 text = "Today is a beautiful day. Tomorrow looks like bad weather."
 blob = TextBlob(text)
 #print(blob)
@@ -45,3 +45,30 @@ print(nepali)
 
 english = hindi.translate()
 print(english)
+'''
+from textblob import Word
+index = Word('index') # pluralize index
+cacti = Word('cacti') # singularize cacti
+print(index.pluralize())
+print(cacti.singularize())
+
+#wordlist
+animals = TextBlob("dog cat fish bird").words
+print(animals.pluralize())
+
+#spellcheck and corrections
+word = Word("theyr")
+print(word.spellcheck()) # show confidence level and check
+print(word.correct()) # goes with the one with the highest confidence level
+
+# from nltk.stem import WordNetLemmatizer
+word1 = Word('studies')
+word2 = Word('varieties')
+print(word1.stem())
+print(word2.stem())
+#print(word1.lemmatize()) # ERROR
+#print(word2.lemmatize()) #ERROR
+
+happy = Word('happy')
+#print(happy.definitions) # ERROR
+#print(happy.synsets) # ERROR
