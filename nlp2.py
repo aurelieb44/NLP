@@ -23,7 +23,7 @@ print(blob.word_counts["juliet"])
 print(blob.word_counts["romeo"])
 #print(blob.noun_phrases.count('lady capulet')) # commented out because very slow
 
-more_stops = ["thee", "thy", "thou", "'"]
+more_stops = ["thee", "thy", "thou", "’"]
 stops += more_stops
 
 items = blob.word_counts.items()
